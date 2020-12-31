@@ -1,10 +1,10 @@
 * {
-  font-family: arial, helvetica, sans-serif;
+  font-family: 'Audiowide', cursive;
   box-sizing: border-box;
   text-align: center;
   margin: 0 auto;
 }
-body {
+#body {
   height: 100vh;
   background: powderblue;
 }
@@ -24,8 +24,12 @@ main {
 img {
   width: 15vw;
   height: 15vw;
-  border: white 1vw solid;
+  border: white 1vw dotted;
   border-radius: 5px;
+  margin: auto 10px;
+}
+.hidden {
+  border-style: hidden;
 }
 body,
 header,
@@ -43,15 +47,15 @@ button {
   width: 30vw;
   margin: .1em;
   background: #0d78eb;
-  color: white;
+  color: powderblue;
   border: 5px solid #0d78eb;
   font-size: 2em;
   cursor: pointer;
 }
 button:focus,
 button:hover {
-  background: white;
-  color: #0d78eb
+  background: powderblue;
+  color: #0d78eb;
   border: 5px solid #0d78eb;
 }
 @media only screen and (max-width: 600px) {
