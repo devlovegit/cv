@@ -6,7 +6,8 @@
 }
 #body {
   height: 100vh;
-  background: powderblue;
+  background: #A2F18A;
+  color: #10180d;
 }
 aside,
 body,
@@ -28,8 +29,16 @@ img {
   border-radius: 5px;
   margin: auto 10px;
 }
-.hidden {
-  border-style: hidden;
+.bold {
+  text-transform: capitalize;
+}
+.border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+.border-gradient-mod {
+  border-image-source: linear-gradient(to top, #A2F18A, #8aa2f1);
 }
 body,
 header,
@@ -46,17 +55,17 @@ table {
 button {
   width: 30vw;
   margin: .1em;
-  background: #0d78eb;
-  color: powderblue;
-  border: 5px solid #0d78eb;
+  background: #8aa2f1;
+  color: #A2F18A;
+  border: 5px solid #8aa2f1;
   font-size: 2em;
   cursor: pointer;
 }
 button:focus,
 button:hover {
-  background: powderblue;
-  color: #0d78eb;
-  border: 5px solid #0d78eb;
+  background: #A2F18A;
+  color: #8aa2f1;
+  border: 5px solid #8aa2f1;
 }
 @media only screen and (max-width: 600px) {
   img {

@@ -29,6 +29,7 @@ function getWinner() {
  }
  return "c";
 }
+
 // -The available weapons and which opponent they defeat
 const RPS = ["rock", "paper", "scissors"];
 // - Available images associated with each weapon
@@ -92,8 +93,11 @@ function render() {
   pImgEl.alt = pImg.alt;
   cImgEl.src = cImg.path;
   cImgEl.alt = cImg.alt;
-  highlight()
+  highlight();
+  stopGame();
 }
+
+
   // highlight the winner
 function highlight() {
   if (winner === 'p') {
@@ -160,19 +164,26 @@ init();
 
 // -Display the results
 
-
-
-
-
-
-
-
-
-
 //only if user is beating computer play we are the champions otherwise I'm a loser
-function play() {
+function playWin() {
   let audio = new Audio('sounds/champ.mp3');
+  audio.play();
+}
+function playLose() {
+  let audio = new Audio('sounds/loser.mp3');
   audio.play();
 }
 //after 5 games change background and play corresponding audio
 const body = document.getElementById('body');
+
+function stopGame() {
+  let scoreTotal = scores.p + scores.c;
+  while (scoreTotal == 3) {
+    if (scores.p > scores.c) {
+      return playWin();
+    } else if (scores.p < scores.c){
+      return playLose();
+    }
+
+  }
+}
