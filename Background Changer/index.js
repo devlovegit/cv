@@ -5,7 +5,7 @@ function random(number) {
 }
 
 colorButton.onclick = function() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
-  document.body.style.backgroundColor = rndCol;
+  //const ranCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  //document.body.style.backgroundColor = ranCol;
+  document.body.style.background =url('Confetti_BG.jpg');
 }
-console.log("HI");
