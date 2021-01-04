@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  font-size: 1em;
+}
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: 80px 80px;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "main main main main";
+  grid-gap: .25em;
+  background-color: lightblue;
+}
+.item-header {
+  grid-area: header;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  background-color: black;
+  color: white;
+  text-align: right;
+}
+.btn {
+  background-color: dimgray;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin: 4px 2px;
+  border-radius: 20%;
+  font-size: 1.2em;
+}
+.silver {
+  background-color: silver;
+}
+.orange {
+  background-color: orange;
+}

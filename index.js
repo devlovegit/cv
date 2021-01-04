@@ -1,10 +1,11 @@
-function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
+document.querySelector(".bg-changer").onclick = function () {
+        location.href = "BackgroundChanger/index.html";
+    };
 
-function myFunction() {
-  let color = "";
-  let arr = ['red', 'blue', 'green']
+document.querySelector(".rps").onclick = function () {
+        location.href = "rockpaperscissors/index.html";
+    };
 
-  document.body.style.backgroundColor = "gray";
-}
+document.querySelector(".calc").onclick = function () {
+        location.href = "Calculator/index.html";
+    };
