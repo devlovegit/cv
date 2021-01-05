@@ -3,17 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 .change {
   background-color: #e8efeb;
 }
-
-
-
-.btn {
-  background-color: ;
+.container {
+  width: 100vh;
+}
+.grid--container {
+  display: grid;
+  grid-template-areas: "header header header"
+                       "sidebar content content"
+                       ". footer footer";
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 50px 1fr 50px;
+  grid-gap: 5px;
+  background: orange;
 }
 
-.colorsarr {
-
+.top {
+  grid-area: 1/1/4/4;
+  background: yellow;
+}
+.sidebar {
+  grid-area: sidebar;
+  background: green;
+}
+.main {
+  grid-area: content;
+  background: purple;
+}
+.bottom {
+  grid-area: footer;
+  background: blue;
 }
