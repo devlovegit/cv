@@ -1,38 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-.change {
-  background-color: #e8efeb;
+  color: #000;
+  font-family: 'Yeon Sung', cursive;
 }
 .container {
-  width: 100vh;
+  height: 100vh;
 }
 .grid--container {
   display: grid;
-  grid-template-areas: "header header header"
-                       "sidebar content content"
-                       ". footer footer";
-  grid-template-rows: auto auto auto;
-  grid-template-columns: 50px 1fr 50px;
+  grid-template-areas: ". header ."
+                       "sidebar content ."
+                       ". footer .";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto 1fr 50px;
   grid-gap: 5px;
-  background: orange;
+  background: #adeecf;
 }
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: .75em;
+}
+a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  display: block;
+  transition: .5s;
+}
+a:hover {
+  color: #adeecf;
+}
+.navbar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+li {
+  list-style-type: none;
+}
+.open {
+  font-size: 40px;
+  color: #e9b0df;
+}
+.navbar {
+  background: #e9b0df;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0px;
 
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 .top {
-  grid-area: 1/1/4/4;
-  background: yellow;
+  grid-area: header;
+  background: #e9b0df;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
 }
 .sidebar {
   grid-area: sidebar;
-  background: green;
+
 }
 .main {
   grid-area: content;
-  background: purple;
+  background: #e8efeb;
 }
 .bottom {
   grid-area: footer;
-  background: blue;
+  background: #e9b0df;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+.colorContent {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 0;
 }

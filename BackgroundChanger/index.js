@@ -1,16 +1,17 @@
+
 const colorButton = document.querySelector(".btn");
-let currColor = document.querySelector(".change");
+let currColor = document.querySelector(".main");
 
 function random(number) {
   return Math.floor(Math.random() * (number+1));
-}
+};
 
-let colorsArr = ['#295939', '#e9b0df', '#adeecf'];
+let colorsArr = ['#e8efeb', '#e9b0df', '#adeecf'];
 
 colorButton.onclick = function() {
   let ranCol = colorsArr[Math.floor(Math.random() * colorsArr.length)];
   currColor.style.backgroundColor = ranCol;
-}
+};
 
 // function stopColorChange() {
 // if (currColor =='#adeecf') {

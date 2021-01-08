@@ -4,18 +4,41 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles.css">
     <script src="index.js" defer></script>
+    <script>
+      function openNav() {
+        document.getElementById("mynavbar").style.width = "200px";
+      }
+
+      function closeNav() {
+        document.getElementById("mynavbar").style.width = "0";
+      }
+    </script>
     <title>Background Changer</title>
   </head>
   <body class="change">
     <div class="container grid--container">
-      <div class="top">Header</div>
-      <div class="sidebar">Sidebar</div>
-      <div class="main">Content</div>
-      <div class="bottom">Footer</div>
+      <div class="top">
+        <h1>I don't like this background</h1>
+      </div>
+      <div class="sidebar">
+        <ul id='mynavbar'class="navbar">
+          <li><a href="#" class="closebtn" onclick="closeNav()">&hearts;</a></li>
+          <li><a href="#">Other Projects</a></li>
+          <li><a href="#">Profile</a></li>
+        </ul>
+      </div>
+      <div class="burger">
+          <a href="#" class="open" onclick="openNav()">☰</a>
+      </div>
+      <div class="main">
+        <div class="colorContent">
+          <h2>Can you help me pick a good color?</h2>
+          <button type="button" class="btn">Random Color</button>
+        </div>
+      </div>
+      <div class="bottom">
+        <p>Made with 💔 in SF</p>
+      </div>
     </div>
   </body>
 </html>
-
-<!-- <h1>I don't like this background</h1>
-<h2>Can you help me pick a good color?</h2>
-<button type="button" class="btn">Random Color</button> -->
