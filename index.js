@@ -9,3 +9,7 @@ document.querySelector(".rps").onclick = function () {
 document.querySelector(".calc").onclick = function () {
         location.href = "Calculator/index.html";
     };
+
+document.querySelector(".nav-page").onclick = function () {
+        location.href = "/Users/devinhakola/Documents/GitHub/cv/NavBars/horizontalnav/index.html";
+    };

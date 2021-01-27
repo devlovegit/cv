@@ -5,23 +5,23 @@
 }
 
 body{
-    background: royalblue;
+    background: #2B4CF8;
 }
 
 /* Nav elements */
 nav {
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  font-family: 'Fraunces', serif;
-  background: lightblue;
+  font-family: 'Josefin Sans', sans-serif;
+  background: #F8D72B;
 }
 
 .logo {
-  padding-left: 50px;
-  font-size: 2em;
-  letter-spacing: 4px;
+  padding: 30px 0 15px 5px;
+  font-size: 1.5em;
+  letter-spacing: 6px;
   text-transform: uppercase;
   color: goldenrod;
 }
@@ -29,7 +29,8 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  align-items: flex-end;
+  width: 30%;
 }
 
 .nav-links li {
@@ -38,29 +39,67 @@ nav {
 }
 
 .nav-links a {
-  color: rgba(250, 250, 250, 1);
+  color: goldenrod;
   text-decoration: none;
-  font-size: 1.5em;
-  letter-spacing: 3px;
+  font-size: 1em;
+  letter-spacing: 1px;
 }
 
 .nav-links a:hover {
   color: rgba(25, 25, 250, .5);
+  font-style: italic;
   text-decoration: none;
 }
 
 /* Burger menu */
 .burger {
-    display: none;
+    display: flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    background: white;
+    margin: 10px 0 0 10px;
+    width: 50px;
 }
 
 .burger div {
     width: 25px;
     height: 3px;
-    background: goldenrod;
-    margin: 5px;
-    transition: all .3s ease;
+    background: #C37B32;
+    margin: 1px;
+}
+
+#sesame {
+    background: #F5C588;
+}
+
+#top-bun {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    height: 7px;
+}
+
+#cheese {
+    background: #F6A807;
+    height: 1px;
+    width: 30px;
+}
+
+#meat {
+    background: #775347;
+}
+
+#lettuce {
+    background: #91D615;
+    width: 30px;
+    height: 1px;
+}
+
+#bottom-bun {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    height: 4px;
 }
 
 /* Animation */
@@ -79,7 +118,7 @@ nav {
     }
 }
 
-.toggle .line1 {
+/* .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
@@ -89,24 +128,16 @@ nav {
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-}
+} */
 
-/* Large screens */
-@media screen and (max-width:1024px) {
-    .nav-links {
-      width: 65%;
-    }
-    .logo {
-      padding-left: 40px;
-    }
-}
 
 /* Phones */
-@media only screen and (max-width:600) {
+
+/* @media only screen and (max-width:600px) {
     body {
         overflow-x: hidden;
         background: purple;
-        /* still not right on pixel */
+        //doesn't work
     }
     .nav-links {
       position: absolute;
@@ -127,4 +158,4 @@ nav {
     .burger {
         display: block;
     }
-}
+} */
