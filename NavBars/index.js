@@ -6,7 +6,6 @@ const navSlide = () => {
     burger.addEventListener('click', () => {
         // Toggle Nav
         nav.classList.toggle('nav-active');
-        console.log(nav)
         // Animate links
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
@@ -19,12 +18,6 @@ const navSlide = () => {
         burger.classList.toggle('toggle');
     });
 }
-
-// document.querySelector(".nav-page").onclick = function () {
-//         location.href = "NavBars/horizontalnav/index.html";
-//     };
-
-
 
 navSlide();
 
