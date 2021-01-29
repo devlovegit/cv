@@ -6,13 +6,16 @@
         <title>SideNav Push w/ Opacity</title>
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body id="myBody">
         <header>
+            <div id="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
             <nav id="mySideNav" class="sideNav">
                 <ul>
-                    <li>
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    </li>
                     <li>
                         <a href="#">Home</a>
                     </li>
@@ -21,7 +24,6 @@
                     </li>
                 </ul>
             </nav>
-            <button type="button" name="button" id="openButton">Open</button>
         </header>
 
         <main id="main">

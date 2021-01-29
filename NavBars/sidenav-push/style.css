@@ -1,26 +1,53 @@
 :root {
-
+    --primary-color: ;
+    --secondary-color: ;
 }
 
-body {
-    background: #1F7F8F;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.active-sideNav {
-    
+
+#myBody {
+    background: rgb(31, 127, 143);
 }
 
+
+header {
+    display: flex;
+}
+
+/* burger */
+#burger {
+    position: relative;
+    top: 10px;
+    left: 50px;
+    cursor: pointer;
+    transition: margin-left .5s;
+}
+
+#burger .line {
+    background: #f1f1f1;
+    width: 20px;
+    height: 4px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+#burger:hover {
+    opacity: .7;
+}
+
+.burger-active {
+    margin-left: 200px;
+}
+/* TODO: get sideNav Transition fixed to smooth: */
+/* nav-bar */
 .sideNav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background: black;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: .5s;
+    display: none;
+    transition: margin-left 5s ease;
 }
 
 .sideNav a {
@@ -29,24 +56,34 @@ body {
     font-size: 25px;
     display: block;
     color: #818181;
-    transition: .3s;
+    transition: 1s;
 }
 
 .sideNav a:hover {
     color: #f1f1f1;
 }
 
-.sideNav .closebtn {
-    position: absolute;
+.active-sideNav {
+    display: flex;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    left: 0;
+    background: black;
+    padding-top: 60px;
 }
 
 #main {
     transition: margin-left .5s;
-    padding: 20px;
+    padding: 20px 55px;
+}
+
+#main.active {
+    margin-left: 200px;
+    filter: blur(1px);
+    /* transition-duration: 2s; */
 }
 
 @media screen and (max-height: 450px) {
