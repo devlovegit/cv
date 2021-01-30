@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #DBD9DB;
+    --secondary-color: #393C40;
+    --tertiary-color: #DD3650;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: var(--primary-color);
+    font-family: "Fraunces", sans-serif;
+    font-size: 16px;
+    line-height: 1.8em;
+}
+
+/* TODO: fix scroll-snap
+scroll-snap-type: y mandatory;
+overflow-y: scroll;
+scroll-snap-align: start;*/
+
+.nav-bar {
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.nav-bar__btn {
+    position: fixed;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .7s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar__btn__burger {
+    width: 20px;
+    height: 2px;
+    position: relative;
+    background: var(--tertiary-color);
+    border-radius: 0 0 5px 5px;
+    transition: all .7s ease-in-out;
+}
+
+.nav-bar__btn__burger::before,
+.nav-bar__btn__burger::after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: var(--tertiary-color);
+    border-radius: 0 0 5px 5px;
+    transition: all .7s ease-in-out;
+}
+
+.nav-bar__btn__burger::before {
+    transform: translateY(-6px);
+}
+
+.nav-bar__btn__burger::after {
+    transform: translateY(6px);
+}
+
+/* links */
+.nav-bar__links {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: var(--primary-color);
+    border-radius: 6px;
+    transition: visibility .6s ease;
+}
+
+.nav-bar__links li {
+    list-style: none;
+    margin: 10px;
+}
+
+.nav-bar__links li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.nav-bar__links li a::after {
+    content: '';
+    display: block;
+    border-bottom: .1px solid var(--tertiary-color);
+}
+
+/* Animation */
+.nav-bar__btn.--open .nav-bar__btn__burger{
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.nav-bar__btn.--open .nav-bar__btn__burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.nav-bar__btn.--open .nav-bar__btn__burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.--hidden {
+    visibility: hidden;
+}
+
+.--sepia {
+    filter:  sepia(3);
+}
+/* parallax */
+.pimg {
+    height: 100vh;
+    position: relative;
+    opacity: 0.95;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+
+    /* background-attachment: fixed; */
+}
+
+.pimg1 {
+    background-image: url('../images/cybertruck.jpg');
+}
+
+.pimg2 {
+    background-image: url('../images/model-s-driving.jpg');
+    background-position: center;
+}
+
+.section {
+    text-align: center;
+}
+
+.ptext {
+    color: var(--secondary-color);
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.--red {
+    color: var(--tertiary-color);
+}
+
+
+@media (min-width: 600px) {
+    .pimg {
+        background-size: contain;
+    }
+}

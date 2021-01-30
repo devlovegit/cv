@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 :root {
     --primary-color: salmon;
     --secondary-color: tomato;
+    --tertiary--color: rgb(156, 204, 213);
 }
 
 * {
@@ -11,6 +14,10 @@
 
 .my-body {
     background-color: var(--primary-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 /* nav-bar */
 .nav-bar {
@@ -44,32 +51,30 @@
     transition: all .5s ease-in;
 }
 
+
 /* main content */
-.main {
-    width: 50vw;
-    height: 70vh;
-    margin: 50px 10px 50px 70px;
-    text-align: center;
-}
-
-.main p {
-    margin: 10px;
-}
-
-/* footer */
-.about-text {
-    display: none;
-
-}
-
-.active {
-    position: absolute;
-    top: 50px;
+.content {
     display: flex;
+    flex-flow: column;
     justify-content: center;
-    transition: width 5s ease-in .2s;
+    margin-top: 50px;
+    padding: 10px;
+    height: 50vh;
+    width: 250px;
+    background: var(--tertiary--color);
+    border-radius: 5%;
+}
+.content p {
+    margin-top: 10px;
+}
+
+/* about */
+.about-text {
+    /* transition: 5s ease-in .2s; */
 }
 
 .hidden {
     display: none;
 }
+
+/* visibility: hidden */
